@@ -7,6 +7,8 @@ A Node.js application developed with **Express.js** and **MongoDB** to demonstra
 - **Update Job**: Modify job application details by job ID.
 - **Delete Job**: Remove a job application by job ID.
 
+The application is hosted on [Render](https://jobapp-75y1.onrender.com).
+
 ---
 
 ## Technology Stack
@@ -26,7 +28,7 @@ A Node.js application developed with **Express.js** and **MongoDB** to demonstra
 
 ---
 
-## Installation
+## Installation (for local development)
 
 1. Clone the repository:
     ```bash
@@ -59,11 +61,19 @@ The application will start on port `10000` by default. You can access the APIs v
 
 ---
 
+## Hosted Version
+
+The API is live and hosted on **Render**. You can access the endpoints here:
+
+- **Base URL**: `https://jobapp-75y1.onrender.com/api/jobs`
+
+---
+
 ## API Endpoints
 
 ### 1. Create Job
 **POST** `/api/jobs`  
-Create a new job application.
+Create a new job.
 
 #### Request Body (JSON):
 ```json
@@ -74,3 +84,34 @@ Create a new job application.
     "location": "Baner",
     "salary": 15000
 }
+
+---
+
+### 2. List Job
+**GET** `/api/jobs`  
+Get all jobs.
+
+---
+
+### 3. Update Job
+**PUT** `/api/jobs/:id`
+Update a job by its ID. To get the job ID, first hit the GET API.
+For example: /api/jobs/675455ca08da3sdfsdfj8ca5a
+
+#### Request Body (JSON): Provided the updated json to update of Id
+```json
+{
+    "title": "Senior Software Developer",
+    "description": "Excited for Senior Software Developer position.",
+    "company": "Aloha Technology Pvt Ltd",
+    "location": "Pune",
+    "salary": 4500
+}
+
+---
+
+### 4. Delete Job
+**DELETE** `/api/jobs/:id`  
+Delete a job by its ID. To get the job ID, first hit the GET API.
+For example: /api/jobs/675455ca08da3sdfsdfj8ca5a
+
