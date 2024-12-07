@@ -84,7 +84,7 @@ Create a new job.
     "location": "Baner",
     "salary": 15000
 }
-
+```
 ---
 
 ### 2. List Job
@@ -107,7 +107,7 @@ For example: /api/jobs/675455ca08da3sdfsdfj8ca5a
     "location": "Pune",
     "salary": 4500
 }
-
+```
 ---
 
 ### 4. Delete Job
