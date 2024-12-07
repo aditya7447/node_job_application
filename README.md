@@ -49,7 +49,7 @@ The application is hosted on [Render](https://jobapp-75y1.onrender.com).
     - Ensure you have a **MongoDB** cluster (or a local MongoDB instance).
     - Update the MongoDB connection string in `index.js` if needed:
       ```javascript
-      mongoose.connect("mongodb+srv://<username>:<password>@cluster0.mongodb.net/")
+      mongoose.connect("mongodb://localhost:27017/jobapp")
       ```
 
 5. Run the application:
@@ -98,7 +98,7 @@ Get all jobs.
 Update a job by its ID. To get the job ID, first hit the GET API.
 For example: /api/jobs/675455ca08da3sdfsdfj8ca5a
 
-#### Request Body (JSON): Provided the updated json to update of Id
+#### Request Body (JSON): Provide the updated details for the job ID:
 ```json
 {
     "title": "Senior Software Developer",
